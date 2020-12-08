@@ -91,7 +91,7 @@ public class Controlador implements ActionListener,MouseListener{
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
+	
 	public void mousePressed(MouseEvent e) {
 		click = true;
 		Object o = e.getSource();
