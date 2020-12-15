@@ -9,7 +9,7 @@
 
 package the_game_of_life;
 
-public class Modelo
+public class Modelo implements Interfaz_Modelo
 {
 	// Attributes.
 	private boolean[][] area;
@@ -151,7 +151,7 @@ public class Modelo
 				area[i][j] = false;	
 	}
 	
-	private boolean[][] copyArea()
+	public boolean[][] copyArea()
 	{
 		boolean[][] areaCopy = new boolean[rowsNumber][colsNumber];
 		
@@ -161,5 +161,7 @@ public class Modelo
 		
 		return areaCopy;
 	}
+
+
 	
 }
