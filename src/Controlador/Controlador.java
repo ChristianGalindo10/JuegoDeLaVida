@@ -1,5 +1,7 @@
-package the_game_of_life;
+package Controlador;
 
+import Modelo.Modelo;
+import Interfaces.Interfaz_Iniciar;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -10,8 +12,9 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import Vista.TheGameOfLife;
 
-public class Controlador implements ActionListener,MouseListener{
+public class Controlador implements ActionListener,MouseListener,Interfaz_Iniciar{
 	
 	private Modelo modelo;
 	private TheGameOfLife vista;
@@ -33,6 +36,7 @@ public class Controlador implements ActionListener,MouseListener{
 		}
 	}
 	
+        @Override
 	public void iniciar(){
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(3);
@@ -48,7 +52,6 @@ public class Controlador implements ActionListener,MouseListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println(e.getActionCommand());
 		if(e.getActionCommand().equals("Next")){
 			modelo.nextGen();
 			vista.setArea(modelo.getArea());

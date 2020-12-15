@@ -1,3 +1,7 @@
+package Modelo;
+
+import Interfaces.Interfaz_Area;
+
 /**
  * The game of life
  *
@@ -6,10 +10,10 @@
  * @copyright 2017 Oligalma
  * @license GPL License v3
  */
-package the_game_of_life;
 
 
-public class Modelo implements Interfaz_Modelo {
+
+public class Modelo implements Interfaz_Area {
     // Attributes.
 
     private boolean[][] area;
@@ -23,7 +27,6 @@ public class Modelo implements Interfaz_Modelo {
     }
 
     // Method to calculate next generations
-    @Override
     public void nextGen() {
         int cell = 0, row, col;
 

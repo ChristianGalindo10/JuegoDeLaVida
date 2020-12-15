@@ -1,10 +1,8 @@
 
-package the_game_of_life;
+package Interfaces;
 
-public interface Interfaz_Modelo {
-    
-    public void nextGen();
-
+public interface Interfaz_Area {
+  
     public boolean[][] getArea();
 
     public void setArea(boolean[][] area);
