@@ -11,6 +11,4 @@ public interface Interfaz_Modelo {
 
     public void clearArea();
 
-    public boolean[][] copyArea();
-
 }

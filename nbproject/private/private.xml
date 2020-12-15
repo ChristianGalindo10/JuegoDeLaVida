@@ -3,9 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Guillermo%20Velez/Documents/NetBeansProjects/JuegoDeLaVida-master/src/the_game_of_life/TheGameOfLife.java</file>
-            <file>file:/C:/Users/Guillermo%20Velez/Documents/NetBeansProjects/JuegoDeLaVida-master/src/Services/ObjetosGraficos.java</file>
-            <file>file:/C:/Users/Guillermo%20Velez/Documents/NetBeansProjects/JuegoDeLaVida-master/src/the_game_of_life/Main.java</file>
+            <file>file:/C:/Users/USUARIO/eclipse-workspace/JuegoDeLaVida/src/the_game_of_life/Modelo.java</file>
+            <file>file:/C:/Users/USUARIO/eclipse-workspace/JuegoDeLaVida/src/the_game_of_life/Controlador.java</file>
         </group>
     </open-files>
 </project-private>

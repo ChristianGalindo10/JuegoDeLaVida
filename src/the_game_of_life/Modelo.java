@@ -8,8 +8,8 @@
  */
 package the_game_of_life;
 
-<<<<<<< HEAD
-public class Modelo {
+
+public class Modelo implements Interfaz_Modelo {
     // Attributes.
 
     private boolean[][] area;
@@ -23,19 +23,13 @@ public class Modelo {
     }
 
     // Method to calculate next generations
+    @Override
     public void nextGen() {
         int cell = 0, row, col;
 
         // Copy area matrix.
         boolean[][] areaCopy = this.copyArea();
-=======
-public class Modelo implements Interfaz_Modelo
-{
 	// Attributes.
-	private boolean[][] area;
-	private int rowsNumber, colsNumber;
->>>>>>> d583cbe3557b17f632f14cf43c6e0a9165b0c614
-
         for (row = 0; row < rowsNumber; row++) {
             for (col = 0; col < colsNumber; col++) {
                 if (row != 0 && row != rowsNumber - 1 && col != 0 && col != colsNumber - 1) {
@@ -78,14 +72,17 @@ public class Modelo implements Interfaz_Modelo
         }
     }
 
+    @Override
     public boolean[][] getArea() {
         return area;
     }
 
+    @Override
     public void setArea(boolean[][] area) {
         this.area = area;
     }
 
+    @Override
     public void clearArea() {
         for (int i = 0; i < area.length; i++) {
             for (int j = 0; j < area[0].length; j++) {
@@ -108,28 +105,4 @@ public class Modelo implements Interfaz_Modelo
         }
         return areaCopy;
     }
-
-<<<<<<< HEAD
-=======
-	public void clearArea()
-	{
-		for (int i = 0; i < area.length; i++)
-			for (int j = 0; j < area[0].length; j++)
-				area[i][j] = false;	
-	}
-	
-	public boolean[][] copyArea()
-	{
-		boolean[][] areaCopy = new boolean[rowsNumber][colsNumber];
-		
-		for (int row = 0; row < rowsNumber; row++)
-			for (int col = 0; col < colsNumber; col++)
-				areaCopy[row][col] = area[row][col];
-		
-		return areaCopy;
-	}
-
-
-	
->>>>>>> d583cbe3557b17f632f14cf43c6e0a9165b0c614
 }
