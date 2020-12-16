@@ -13,17 +13,17 @@ import Interfaces.Interfaz_Area;
 
 
 
-public class Modelo implements Interfaz_Area {
+public class Vivarium implements Interfaz_Area {
     // Attributes.
 
-    private boolean[][] area;
+    private boolean[][] celulas;
     private int rowsNumber, colsNumber;
 
     // Constructor.
-    public Modelo(int rowsNumber, int colsNumber) {
+    public Vivarium(int rowsNumber, int colsNumber) {
         this.rowsNumber = rowsNumber + 2;
         this.colsNumber = colsNumber + 2;
-        this.area = new boolean[rowsNumber][colsNumber];
+        this.celulas = new boolean[rowsNumber][colsNumber];
     }
 
     // Method to calculate next generations
@@ -62,11 +62,11 @@ public class Modelo implements Interfaz_Area {
                     }
                     if (areaCopy[row][col]) {
                         if (cell == 0 || cell == 1 || cell >= 4) {
-                            area[row-1][col-1] = false;
+                            celulas[row-1][col-1] = false;
                         }
                     } else {
                         if (cell == 3) {
-                            area[row-1][col-1] = true;
+                            celulas[row-1][col-1] = true;
                         }
                     }
                     cell = 0;
@@ -77,19 +77,19 @@ public class Modelo implements Interfaz_Area {
 
     @Override
     public boolean[][] getArea() {
-        return area;
+        return celulas;
     }
 
     @Override
     public void setArea(boolean[][] area) {
-        this.area = area;
+        this.celulas = area;
     }
 
     @Override
     public void clearArea() {
-        for (int i = 0; i < area.length; i++) {
-            for (int j = 0; j < area[0].length; j++) {
-                area[i][j] = false;
+        for (int i = 0; i < celulas.length; i++) {
+            for (int j = 0; j < celulas[0].length; j++) {
+                celulas[i][j] = false;
             }
         }
     }
@@ -102,7 +102,7 @@ public class Modelo implements Interfaz_Area {
                 if (row == 0 || row == rowsNumber - 1 || col == 0 || col == colsNumber - 1) {
                     areaCopy[row][col] = false;
                 } else {
-                    areaCopy[row][col] = area[row-1][col-1];
+                    areaCopy[row][col] = celulas[row-1][col-1];
                 }
             }
         }

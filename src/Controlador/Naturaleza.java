@@ -1,6 +1,6 @@
 package Controlador;
 
-import Modelo.Modelo;
+import Modelo.Vivarium;
 import Interfaces.Interfaz_Iniciar;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -14,17 +14,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import Vista.TheGameOfLife;
 
-public class Controlador implements ActionListener,MouseListener,Interfaz_Iniciar{
+public class Naturaleza implements ActionListener,MouseListener,Interfaz_Iniciar{
 	
-	private Modelo modelo;
+	private Vivarium vivarium;
 	private TheGameOfLife vista;
 	private boolean leftButtonPressed;
 	private boolean click = false;
 	
-	public Controlador(TheGameOfLife vista, Modelo modelo) {
+	public Naturaleza(TheGameOfLife vista, Vivarium modelo) {
 		this.vista = vista;
 		vista.init();
-		this.modelo = modelo;
+		this.vivarium = modelo;
 		this.vista.getNextGenButton().addActionListener(this);
 		this.vista.getEraseButton().addActionListener(this);
 		
@@ -53,11 +53,11 @@ public class Controlador implements ActionListener,MouseListener,Interfaz_Inicia
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("Next")){
-			modelo.nextGen();
-			vista.setArea(modelo.getArea());
+			vivarium.nextGen();
+			vista.setArea(vivarium.getArea());
 		}else {
-			modelo.clearArea();
-			vista.setArea(modelo.getArea());
+			vivarium.clearArea();
+			vista.setArea(vivarium.getArea());
 		}
 	}
 	@Override
@@ -86,7 +86,7 @@ public class Controlador implements ActionListener,MouseListener,Interfaz_Inicia
 			}
 		}
 		
-		modelo.setArea(area2);
+		vivarium.setArea(area2);
 		
 	}
 	@Override

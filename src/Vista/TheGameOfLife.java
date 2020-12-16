@@ -21,7 +21,7 @@ public class TheGameOfLife extends JApplet implements Interfaz_Iniciar, Interfaz
     private static final long serialVersionUID = 1L;
     private static final int ROWS_NUMBER = 25;
     private static final int COLS_NUMBER = 45;
-    private JLabel[][] area = new JLabel[25][45];
+    private JLabel[][] celulas = new JLabel[25][45];
     private JPanel jPanel1;
     private JPanel jPanel2;
     private JPanel jPanel3;
@@ -52,11 +52,11 @@ public class TheGameOfLife extends JApplet implements Interfaz_Iniciar, Interfaz
     }
 
     public void crearJLabels() {
-        for (int i = 0; i < area.length; i++) {
-            for (int j = 0; j < area[0].length; j++) {
-                area[i][j] = sObjGraficos.construirJLabel(null, 0, 0, 0, 0, null, null, null, Color.white, null, createLineBorder(Color.black));
-                area[i][j].setOpaque(true);
-                jPanel2.add(area[i][j]);
+        for (int i = 0; i < celulas.length; i++) {
+            for (int j = 0; j < celulas[0].length; j++) {
+                celulas[i][j] = sObjGraficos.construirJLabel(null, 0, 0, 0, 0, null, null, null, Color.white, null, createLineBorder(Color.black));
+                celulas[i][j].setOpaque(true);
+                jPanel2.add(celulas[i][j]);
             }
         }
 
@@ -89,7 +89,7 @@ public class TheGameOfLife extends JApplet implements Interfaz_Iniciar, Interfaz
     }
 
     public JLabel getArea(int i, int j) {
-        return area[i][j];
+        return celulas[i][j];
     }
 
     @Override
@@ -97,9 +97,9 @@ public class TheGameOfLife extends JApplet implements Interfaz_Iniciar, Interfaz
         for (int i = 0; i < area2.length; i++) {
             for (int j = 0; j < area2[0].length; j++) {
                 if (area2[i][j] == true) {
-                    area[i][j].setBackground(Color.red);
+                    celulas[i][j].setBackground(Color.red);
                 } else {
-                    area[i][j].setBackground(Color.white);
+                    celulas[i][j].setBackground(Color.white);
                 }
             }
         }

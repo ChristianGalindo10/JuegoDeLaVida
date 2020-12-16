@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/USUARIO/eclipse-workspace/JuegoDeLaVida/src/Controlador/Controlador.java</file>
-            <file>file:/C:/Users/USUARIO/eclipse-workspace/JuegoDeLaVida/src/Interfaces/Interfaz_Iniciar.java</file>
-            <file>file:/C:/Users/USUARIO/eclipse-workspace/JuegoDeLaVida/src/Modelo/Modelo.java</file>
+            <file>file:/C:/Users/USUARIO/eclipse-workspace/JuegoDeLaVida/src/Modelo/Vivarium.java</file>
+            <file>file:/C:/Users/USUARIO/eclipse-workspace/JuegoDeLaVida/src/Controlador/Naturaleza.java</file>
             <file>file:/C:/Users/USUARIO/eclipse-workspace/JuegoDeLaVida/src/Vista/TheGameOfLife.java</file>
-            <file>file:/C:/Users/USUARIO/eclipse-workspace/JuegoDeLaVida/src/Interfaces/Interfaz_Area.java</file>
+            <file>file:/C:/Users/USUARIO/eclipse-workspace/JuegoDeLaVida/src/Main/Vida.java</file>
         </group>
     </open-files>
 </project-private>
